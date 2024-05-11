@@ -1,12 +1,15 @@
 import { MouseEvent, useState } from "react";
 
-function ListGroup() {
-  let items = ["Benin", "Burundi", "Burkina Faso", "Botswana", "Brazaville"];
+interface Props {
+  items: string[];
+  heading: string;
+}
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSlectedIndex] = useState(-1);
 
   return (
     <>
-      <h1>List Group</h1>
+      <h1>{heading}</h1>
       {items.length === 0 ? <p>No item found</p> : null}
       <ul className="list-group">
         {items.map((item, index) => (
