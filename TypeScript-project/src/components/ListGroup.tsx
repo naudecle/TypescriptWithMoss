@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Button from "./button";
+import Button from "./Button";
 import Alert from "./Alert";
 
 interface Props {
